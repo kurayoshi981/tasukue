@@ -1,0 +1,16 @@
+<header class="header">
+  <nav class="nav">
+    <ul class="header_menu">
+      <li class="nav-link"><%= current_user.name %>さん</li>
+      <li class="header_menu_title"><%= link_to "タスクエ", root_path, class: "nuv-link" %></li>
+      <li>
+        <ul class="header_menu_inner">
+
+          <li><%= link_to "リストを作成", "#" %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
