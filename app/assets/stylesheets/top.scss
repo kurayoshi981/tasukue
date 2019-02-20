@@ -1,7 +1,7 @@
 .topPage {
   min-height: 93vh;
   padding-top: 30px;
-  background: #bababa;
+  // background: #bababa;
   overflow-x: scroll;
   .listWrapper {
     display: flex;
@@ -26,7 +26,7 @@
           margin: 0;
         }
         &_action {
-          .fa-pen, .fa-trash {
+          .fa-edit, .fa-trash {
             font-size: 18px;
             color: #8c8c8c;
           }
