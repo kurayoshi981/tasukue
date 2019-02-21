@@ -5,7 +5,7 @@ class CardController < ApplicationController
   end
 
   def create
-    @card = List.find_by(id: params[:list_id])
+    @card = Card.new(card_params)
     if @card.save
       redirect_to :root
     else
@@ -13,5 +13,10 @@ class CardController < ApplicationController
       render action: :new
     end
   end
+
+  private
+    def card_params
+      params.require(:card).permit(:title, :memo, :list_id)
+    end
 
 end
