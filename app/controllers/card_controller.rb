@@ -32,6 +32,12 @@ class CardController < ApplicationController
     end
   end
 
+  def destroy
+    @card = Card.find_by(id: params[:id])
+    @card.destroy
+    redirect_to :root
+  end
+
 
   private
     def card_params
