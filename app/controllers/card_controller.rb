@@ -1,4 +1,6 @@
 class CardController < ApplicationController
+  before_action :set_card, only: %i(show edit update destroy)
+
   def new
     @card = Card.new
     @list = List.find_by(id: params[:list_id])
@@ -15,15 +17,12 @@ class CardController < ApplicationController
   end
 
   def show
-    @card = Card.find_by(id: params[:id])
   end
 
   def edit
-    @card = Card.find_by(id: params[:id])
   end
 
   def update
-    @card = Card.find_by(id: params[:id])
     if @card.update_attributes(card_params)
       redirect_to :root
     else
@@ -33,7 +32,6 @@ class CardController < ApplicationController
   end
 
   def destroy
-    @card = Card.find_by(id: params[:id])
     @card.destroy
     redirect_to :root
   end
@@ -44,4 +42,7 @@ class CardController < ApplicationController
       params.require(:card).permit(:title, :memo).merge(list_id: params[:list_id])
     end
 
+    def set_card
+      @card = Card.find_by(id: params[:id])
+    end
 end

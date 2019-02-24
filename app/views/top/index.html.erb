@@ -6,7 +6,7 @@
           <h2 class="list_header_title"><%= list.title %></h2>
           <div class="list_header_action">
             <%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_list_path(list)) %>
-            <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, data: { condirm: "#{list.title}を本当に削除しますか？"} %>
+            <%= link_to content_tag(:i, '', class: 'fas fa-trash'), list, method: :delete, data: { confirm: "#{list.title}を本当に削除しますか？"} %>
           </div>
         </div>
         <div class="cardWrapper">
