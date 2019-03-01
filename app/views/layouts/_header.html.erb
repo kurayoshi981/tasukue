@@ -1,6 +1,7 @@
 <header class="header">
   <nav class="nav">
     <ul class="header_menu">
+      <li class="user_image" ><%= image_tag  current_user.avatar, class: "image" %></li>
       <li class="nav-link"><%= current_user.name %>さん</li>
       <li class="header_menu_title"><%= link_to "タスクエ", root_path, class: "nuv-link" %></li>
       <li>
