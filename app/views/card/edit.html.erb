@@ -12,6 +12,10 @@
         <%= f.label :memo %>
         <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
       </div>
+       <div class="cardnewForm_level">
+          <%= f.label :level  %>
+          <%= f.select :level,["1", "2", "3", "4", "5" ], {}, class: "form-control"%>
+       </div>
      <div class="cardeditForm_memo">
         <label>リスト名</label>
         <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>
