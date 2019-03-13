@@ -50,3 +50,25 @@
   width: 50px;
   height: 50px;
 }
+
+.nav-link{
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+.nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #31aae2;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
