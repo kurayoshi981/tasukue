@@ -67,4 +67,6 @@ gem 'jquery-rails'
 gem "font-awesome-sass"
 gem 'pry-rails'
 gem 'mini_magick'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'pg', group: :production

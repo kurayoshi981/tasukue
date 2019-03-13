@@ -2,7 +2,7 @@ class TweetController < ApplicationController
   # before_action :authenticate_user
 
   def index
-    @tweet = Tweet.all
+    @tweet = Tweet.order("created_at ASC").page(params[:page]).per(6)
     # @tweet = Tweet.find_by(id: params[:id])
   end
 
