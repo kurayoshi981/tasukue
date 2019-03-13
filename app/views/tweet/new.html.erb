@@ -1,0 +1,19 @@
+<div class="cardnewPage">
+  <div class="container">
+    <%= form_with model: @tweet, url: { action: :create }, html: { class: 'cardnewForm'} do |f| %>
+      <% if @tweet.errors.any? %>
+        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        <% end %>
+        <div class="cardnewForm_title">
+          <%= f.label :title %>
+          <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "タイトル" %>
+        </div>
+        <div class="cardnewForm_memo">
+          <%= f.label :memo %>
+          <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %>
+        <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
+        </div>
+
+    <% end %>
+  </div>
+</div>

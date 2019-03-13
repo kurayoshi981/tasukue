@@ -1,0 +1,25 @@
+<h1>アウトプットページ</h1>
+<div class="container">
+  <div class="row">
+    <% @tweet.each do |tweet| %>
+      <div class="col-sm-4">
+        <div class="card  bg-light" mb-3" style="max-width: 18rem;">
+          <div class="card-header ">
+            <h4><%= tweet.title %></h4>
+          </div>
+          <div class="card-body">
+            <%= render partial: "tweet/modal" %>
+          </div>
+          <div class="card-footer text-muted">
+            <a>投稿者:<%= tweet.user.name %></a>
+
+
+        <span class="fa fa-heart like-btn"></span>
+
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

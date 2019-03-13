@@ -8,7 +8,7 @@ class ListController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to :root
+      redirect_to :top_index
     else
       @list.valid?
       render action: :new
