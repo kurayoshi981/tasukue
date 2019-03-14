@@ -11,8 +11,8 @@
             <%= render partial: "tweet/modal" %>
           </div>
           <div class="card-footer text-muted">
-            <a>投稿者:<%= tweet.user.name %></a>
             <span class="fa fa-heart like-btn"></span>
+            <a>投稿者:<%= tweet.user.name %></a>
           </div>
           <div><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
         </div>

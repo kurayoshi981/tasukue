@@ -1,0 +1,16 @@
+<div class="listeditPage">
+  <div class="container">
+    <%= form_with model: @tweet, url: { action: :update }, html: { class: 'listForm' } do |f| %>
+      <% if @tweet.errors.any? %>
+        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+      <% end %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control listName", placeholder: "リスト名" %>
+      <div class="cardeditForm_memo">
+        <%= f.label :memo %>
+        <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
+      </div>
+      <div class="text-center"><%= f.submit "編集する", class: "btn btn-primary" %></div>
+    <% end %>
+  </div>
+</div>

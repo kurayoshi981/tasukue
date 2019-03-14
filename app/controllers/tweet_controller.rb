@@ -45,4 +45,5 @@ class TweetController < ApplicationController
 
   def set_tweet
     @tweet = Tweet.find_by(id: params[:id])
+  end
 end
