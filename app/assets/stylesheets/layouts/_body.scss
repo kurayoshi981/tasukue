@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+main {
+    background: #ffffff;
+    flex: 1;
+}

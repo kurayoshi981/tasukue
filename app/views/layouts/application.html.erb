@@ -20,6 +20,9 @@
   <% if user_signed_in? %>
    <%= render partial: "layouts/header" %>
   <% end %>
+  <main>
     <%= yield %>
+  </main>
+  <%= render partial: "layouts/footer" %>
   </body>
 </html>

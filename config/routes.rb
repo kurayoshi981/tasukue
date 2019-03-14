@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'top#show'
+  root 'top#index'
   post "likes/:tweet_id/create" =>"likes#create"
   post "likes/:tweet_id/destroy" =>"likes#destroy"
   resources :top, only: %i(index show)
