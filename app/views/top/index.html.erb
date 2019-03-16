@@ -19,8 +19,13 @@
                 <% end %>
               </div>
             <% end %>
-          <% end %>
 
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="<%= card.memo%>">
+              内容
+            </button>
+
+
+          <% end %>
           <div class="addCard">
             <i class="far fa-plus-square"></i>
             <%= link_to "さらにカードを追加", new_list_card_path(list), class: "addCard_link" %>

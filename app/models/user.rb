@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   validates :name, presence: true
   has_one_attached :avatar
+  has_many :likes, dependent: :destroy
 end

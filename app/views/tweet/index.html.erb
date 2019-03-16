@@ -6,19 +6,22 @@
         <div class="card bg-light mb-3" style="max-width: 300px;">
           <div class="card-header ">
             <h4><%= tweet.title %></h4>
+          </div>
+          <div class="card-body">
+            <%= render partial: "tweet/modal" %>
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="<%= tweet.memo%>">
+            内容2
+            </button>
+          </div>
+          <div class="card-footer text-muted">
+            <span class="fa fa-heart like-btn"></span>
+            <a>投稿者:<%= tweet.user.name %></a>
             <% if user_signed_in? && current_user.id == tweet.user_id %>
               <span><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_tweet_path(tweet)) %>
               <%= link_to content_tag(:i, '', class: 'fas fa-trash'), tweet, method: :delete, data: { confirm: "#{tweet.title}を本当に削除しますか？"} %></span>
             <% end %>
           </div>
-          <div class="card-body">
-            <%= render partial: "tweet/modal" %>
-          </div>
-          <div class="card-footer text-muted">
-            <span class="fa fa-heart like-btn"></span>
-            <a>投稿者:<%= tweet.user.name %></a>
-          </div>
-          <div><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+          <div class="post-time"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
         </div>
       </div>
     <% end %>
