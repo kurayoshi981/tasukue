@@ -6,16 +6,15 @@
         <div class="card bg-light mb-3" style="max-width: 300px;">
           <div class="card-header ">
             <h4><%= tweet.title %></h4>
+            <%= render "likes/like", tweet: tweet %>
           </div>
           <div class="card-body">
-            <%= render partial: "tweet/modal" %>
+            <%= render partial: "modal" %>
             <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="<%= tweet.memo%>">
             内容2
             </button>
           </div>
           <div class="card-footer text-muted">
-            <%= render partial: "tweet/tweet", collection: @tweet, as: :tweet %>
-            <span class="fa fa-heart like-btn"></span>
             <a>投稿者:<%= tweet.user.name %></a>
             <% if user_signed_in? && current_user.id == tweet.user_id %>
               <span><%= link_to(content_tag(:i, '', class: 'far fa-edit'), edit_tweet_path(tweet)) %>

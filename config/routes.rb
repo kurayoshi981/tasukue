@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'top#index'
 
-  post   '/like/:story_id' => 'likes#like',   as: 'like'
-  delete '/like/:story_id' => 'likes#unlike', as: 'unlike'
+  post   '/like/:tweet_id' => 'likes#like',   as: 'like'
+  delete '/like/:tweet_id' => 'likes#unlike', as: 'unlike'
 
   resources :top, only: %i(index show)
 
