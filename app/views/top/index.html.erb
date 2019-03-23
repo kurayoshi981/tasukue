@@ -19,12 +19,6 @@
                 <% end %>
               </div>
             <% end %>
-
-            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="<%= card.memo%>">
-              内容
-            </button>
-
-
           <% end %>
           <div class="addCard">
             <i class="far fa-plus-square"></i>
@@ -35,3 +29,11 @@
     <% end %>
   </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.cardDetail_link').draggable();
+    });
+</script>
