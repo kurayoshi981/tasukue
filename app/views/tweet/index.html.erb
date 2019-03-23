@@ -10,9 +10,6 @@
           </div>
           <div class="card-body">
             <%= render partial: "modal" %>
-            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="<%= tweet.memo%>">
-            内容2
-            </button>
           </div>
           <div class="card-footer text-muted">
             <a>投稿者:<%= tweet.user.name %></a>
