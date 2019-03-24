@@ -6,7 +6,9 @@
         <div class="card bg-light mb-3" style="max-width: 300px;">
           <div class="card-header ">
             <h4><%= tweet.title %></h4>
-            <%= render "likes/like", tweet: tweet %>
+              <a class="like-link">
+                <%= render "likes/like", tweet: tweet %>
+              </a>
           </div>
           <div class="card-body">
             <%= render partial: "modal" %>
