@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e2e4e6;">
     <a class="navbar-brand" href="/">タスクエ</a>
     <% if user_signed_in? %>
-    <%= image_tag  current_user.avatar, class: "image" %>
+
       <a class="navbar-brand" href="/"><%= current_user.name %>さん</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
