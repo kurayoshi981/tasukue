@@ -27,7 +27,7 @@ class CardController < ApplicationController
     if @card.update_attributes(card_params)
       redirect_to :root
     else
-      @ardd.valid?
+      @card.valid?
       render action: :edit
     end
   end
